@@ -10,7 +10,7 @@
 #include "ProgramOptions.h"
 #include "Session.h"
 
-#include "client.h"
+#include "bm_client.h"
 
 #include <boost/asio.hpp>
 

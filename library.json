@@ -1,0 +1,42 @@
+{
+  "name": "cc.mqt.libs",
+  "version": "1.0.0",
+  "description": "The MQTT v5 client library is implemented using C++(17) programming language, but provides C interface. The library's code doesn't use RTTI or exceptions, but by default the library's implementation uses C++ STL data types, such as std::string and std::vector. However, it is possible to compile the library not to use any dynamic memory allocation, and make it suitable for bare-metal environment without any heap.",
+  "keywords": "mqtt, mqtt5, c++, bare-metal",
+  "repository":
+  {
+    "type": "git",
+    "url": "git@github.com:schkovich/cc.mqtt5.libs.git"
+  },
+  "authors":
+  [
+    {
+      "name": "Alex Robenko",
+      "email": "arobenko@gmail.com",
+      "url": "https://www.linkedin.com/in/arobenko/",
+      "maintainer": true
+    },
+    {
+      "name": "Goran Mišković",
+      "email": "goran.miskovic@cultive.tech",
+      "url": "https://www.linkedin.com/in/goran-miskovic/"
+    }
+  ],
+  "license": "Mozilla Public License 2.0",
+  "homepage": "https://www.mozilla.org/en-US/MPL/2.0/",
+  "frameworks": "arduino",
+  "platforms": ["https://github.com/maxgerhardt/platform-raspberrypi.git"],
+  "build": {
+    "includeDir": ".",
+    "flags": [
+      "-I client/lib/include",
+      "-I client/lib/src",
+      "-I build/client/lib/bm",
+      "-I externals/comms/include",
+      "-I externals/cc.mqtt5.generated/include"
+    ],
+    "srcDir": "./client/lib",
+    "srcFilter": "+<*> -<doxygen> -<test>",
+    "libLDFMode": "deep+"
+  }
+}
