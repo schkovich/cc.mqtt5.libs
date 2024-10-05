@@ -31,9 +31,12 @@
     "flags": [
       "-I client/lib/include",
       "-I client/lib/src",
-      "-I build/client/lib/bm",
-      "-I externals/comms/include",
-      "-I externals/cc.mqtt5.generated/include"
+      "-I prepared/build/include",
+      "-DBUILD_SHARED_LIBS=ON",
+      "-DCC_MQTT5_CLIENT_APPS=OFF",
+      "-DCMAKE_INSTALL_PREFIX=build/shared",
+      "-DCMAKE_PREFIX_PATH=prepared/build/include",
+      "-DCC_MQTT5_CUSTOM_CLIENT_CONFIG_FILES=bm_config.cmake"
     ],
     "srcDir": "./client/lib",
     "srcFilter": "+<*> -<doxygen> -<test>",
