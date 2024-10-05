@@ -2,7 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/externals/cc.mqtt5.generated" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/externals/comms" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/prepeared/externals/cc.mqtt5.generated" vcs="" />
+    <mapping directory="$PROJECT_DIR$/prepeared/externals/comms" vcs="" />
   </component>
 </project>
